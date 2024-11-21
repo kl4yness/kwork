@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../next/static/css/30de65721c46034b.css" data-precedence="next">
+    <link rel="preload" as="script" fetchpriority="low" href="../next/static/chunks/webpack-2cbaef941013e65d.js">
+    <script src="../next/static/chunks/fd9d1056-82bef6cf061c941d.js" async=""></script>
+    <script src="../next/static/chunks/117-e88fd9e18528d798.js" async=""></script>
+    <script src="../next/static/chunks/main-app-050fd630f446e664.js" async=""></script>
+    <script src="../next/static/chunks/f5b5f7fb-91cdb664e744ac6e.js" async=""></script>
+    <script src="../next/static/chunks/e37a0b60-5bdbaf635e24431c.js" async=""></script>
+    <script src="../next/static/chunks/6b309846-b149e09192940787.js" async=""></script>
+    <script src="../next/static/chunks/785-0f86b83c9c6d5a94.js" async=""></script>
+    <script src="../next/static/chunks/680-3030f614e48d0178.js" async=""></script>
+    <script src="../next/static/chunks/663-373fe2682f816fba.js" async=""></script>
+    <script src="../next/static/chunks/app/%5Blang%5D/wallet/page-72611580bc8c1acf.js" async=""></script>
+    <script src="../next/static/chunks/648-294bed4b23f0baa5.js" async=""></script>
+    <script src="../next/static/chunks/app/layout-3a3e5f2e1ad9412a.js" async=""></script>
+    <title>AML Check</title>
+    <meta name="description" content="Check your wallet for AML compliance">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" sizes="16x16">
+    <script src="../next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
+    <link rel="stylesheet" href="../burger.css">
+</head>
+
+<body>
+    <header class="fixed w-full z-50 header p-4 bg-white">
+        <div class="flex justify-between items-center"><a href="../index.html"> <img alt="[object Object]"
+                    loading="lazy" width="158" height="32" decoding="async" data-nimg="1" style="color:transparent"
+                    src="../next/static/media/logo.3b6497e6.svg"> </a>
+            <div class="md:flex space-x-4 hidden"><a href="analyze.html"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Анализ</button></a><a
+                    href="../index.html#faq"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">FAQ</button></a><a
+                    href="../index.html#cost"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Ценообразование</button></a><a
+                    href="about_us.html"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">О
+                        нас</button></a></div><a class="" href="wallet.html"><button
+                    class="py-2 px-4  text-xs sm:text-sm md:text-lg rounded-3xl bg-black text-white">Проверить свой
+                    кошелек</button></a>
+            <!-- <div class="flex space-x-4 md:hidden"><button
+                    class="py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black">☰</button>
+            </div>
+        </div>
+        <div class="hidden mt-auto flex-col items-center justify-center md:hidden space-y-4 pt-4 text-xl"><a
+                href="analyze.html"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Анализ</button></a><a
+                href="../index.html#faq"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">FAQ</button></a><a
+                href="../index.html#cost"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Ценообразование</button></a><a
+                href="about_us.html"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">О
+                    нас</button></a></div> -->
+
+            <div class="flex space-x-4 md:hidden">
+                <button id="burgerButton"
+                    class="py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black"
+                    style="z-index: 2;">
+                    ☰
+                </button>
+            </div>
+
+            <div id="burgerMenu"
+                class="hidden fixed top-0 left-0 w-full bg-white z-50 flex flex-col items-center justify-center text-xl"
+                style="height: 260px; z-index: 1;">
+                <a href="analyze.html">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        Анализ
+                    </button>
+                </a>
+                <a href="/index.html#faq">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        FAQ
+                    </button>
+                </a>
+                <a href="/index.html#cost">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        Ценообразование
+                    </button>
+                </a>
+                <a href="about_us.html">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        О нас
+                    </button>
+                </a>
+            </div>
+    </header>
+    <main class="disabled">
+        <div class="flex flex-row justify-center pt-32 pb-32 space-x-3">
+            <div class="App center-content">
+                <div
+                    class="flex flex-col justify-start min-h-64 min-w-96 bg-white border-black border-2 border-opacity-15 rounded-3xl">
+                    <div class="flex flex-row justify-between space-x-3 p-4">
+                        <h1 class=" text-2xl text-black font-bold">Проверка кошелька</h1>
+                        <p class="text-blue-900 bg-blue-200 border-blue-400 rounded-3xl p-1 border-2 border-opacity-20"
+                            style="display: none;">
+                            Step 1 of 5</p>
+                    </div>
+                    <p class="text-black text-lg pl-4">Выберите то, чем вы пользуетесь</p><button
+                        class="bg-white text-black border-black border-2 rounded-3xl p-2 m-4 flex flex-row justify-center space-x-5 hover:bg-blue-200 duration-500"><img
+                            alt="EthereumIcon" loading="lazy" width="30" height="30" decoding="async" data-nimg="1"
+                            style="color:transparent"
+                            srcset="../next/ethereum-1.png 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fethereum.87ae1343.png&amp;w=32&amp;q=75 1x, ../next/ethereum.png 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fethereum.87ae1343.png&amp;w=64&amp;q=75 2x"
+                            src="../next/ethereum.png?url=%2Fnext%2Fstatic%2Fmedia%2Fethereum.87ae1343.png&amp;w=64&amp;q=75">
+                        <p class="pr-6">Ethereum</p>
+                    </button><button
+                        class="bg-white text-black border-black border-2 rounded-3xl p-2 m-4 flex flex-row justify-center space-x-5 hover:bg-blue-200 duration-500"><img
+                            alt="TronIcon" loading="lazy" width="30" height="30" decoding="async" data-nimg="1"
+                            style="color:transparent"
+                            srcset="../next/tron-1.png 1x?url=%2Fnext%2Fstatic%2Fmedia%2Ftron.3e77fb8d.png&amp;w=32&amp;q=75 1x, ../next/tron.png 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Ftron.3e77fb8d.png&amp;w=64&amp;q=75 2x"
+                            src="../next/tron.png?url=%2Fnext%2Fstatic%2Fmedia%2Ftron.3e77fb8d.png&amp;w=64&amp;q=75">
+                        <p class="pr-6">Tron</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="flex flex-col justify-start p-4 bg-black space-y-8 md:space-y-4 pt-12">
+        <div class="flex flex-col justify-start space-y-4"><a href="../index.html"> <img alt="[object Object]"
+                    loading="lazy" width="158" height="32" decoding="async" data-nimg="1" style="color:transparent"
+                    src="../next/static/media/footer.daab4965.svg"> </a>
+            <div class="block font-bold text-md leading-none text-gray-400 mb-3">СЕЙФЛЕМЕНТ ЛИМИТЕД,</div>
+            <p class="uppercase text-sm leading-relaxed text-gray-400 max-w-xs">КВАРТИРА 13 БАШНЯ 2 БЕРКЛИ 7
+                БОНХАНСТРАД-РОУД ЦЫН-КВАН, ГОНКОНГ</p>
+        </div>
+        <hr class="w-full bg-gray-200 h-px my-1">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline space-y-8 md:space-y-0">
+            <div class="flex flex-col space-y-4">
+                <p class="text-2xl leading-relaxed text-gray-400 max-w-xs">Продукты</p>
+                <div class="flex flex-col space-y-4 text-white font-semibold"><a href="wallet.html"> AMLBot </a><a
+                        href="wallet.html"> <!-- -->Investigation<!-- --> </a></div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <p class="text-2xl leading-relaxed text-gray-400 max-w-xs">Нормативные документы</p>
+                <div class="flex flex-col space-y-4 text-white font-semibold"><a href="wallet.html">
+                        <!-- -->Условия<!-- --> </a><a href="wallet.html"> <!-- -->Политика<!-- --> </a></div>
+            </div>
+            <div class="flex flex-col space-y-4 md:mr-8">
+                <p class="text-2xl leading-relaxed text-gray-400 max-w-xs">Социальные сети</p>
+                <div class="footer__social flex flex-row justify-between space-x-14">
+                    <div class="flex flex-col space-y-6 mb-4 md:mb-0"><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://t.me/sprt_aml"><img alt="[object Object]" loading="lazy" width="40"
+                                height="40" decoding="async" data-nimg="1" class="mr-2" style="color:transparent"
+                                src="../next/static/media/telegram.905cef1e.svg"><span
+                                class="text-white">Telegram</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.instagram.com/amlbot/"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="../next/static/media/instagram.15f77719.svg"><span
+                                class="text-white">Instagram</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.facebook.com/AMLBotHQ"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="../next/static/media/facebook.f75958f1.svg"><span
+                                class="text-white">Facebook</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.youtube.com/channel/UCwWKnYS5sQLWVwFBBEEYJgw/videos"><img
+                                alt="[object Object]" loading="lazy" width="40" height="40" decoding="async"
+                                data-nimg="1" class="mr-2" style="color:transparent"
+                                src="../next/static/media/youtube.6b2e30b8.svg"><span
+                                class="text-white">YouTube</span></a></div>
+                    <div class="flex flex-col space-y-6"><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.linkedin.com/company/amlbot/"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="../next/static/media/linkedin.9f21170b.svg"><span
+                                class="text-white">LinkedIn</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.tiktok.com/@cryptoamlbot"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="../next/static/media/tiktok.a837ab25.svg"><span
+                                class="text-white">TikTok</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://twitter.com/AMLBotHQ"><img alt="[object Object]" loading="lazy" width="40"
+                                height="40" decoding="async" data-nimg="1" class="mr-2" style="color:transparent"
+                                src="../next/static/media/twitter.7245dffa.svg"><span
+                                class="text-white">Twitter</span></a></div>
+                </div>
+            </div>
+        </div><span class="text-gray-400 font-semibold pb-10">© 2024 AMLBot</span>
+    </footer>
+    <!-- <script src="../next/static/chunks/webpack-2cbaef941013e65d.js" async=""></script> -->
+    <script>(self.next_f = self.next_f || []).push([0]); self.next_f.push([2, null])</script>
+    <script>self.next_f.push([1, "1:HL[\"/next/static/css/30de65721c46034b.css\",\"style\"]\n"])</script>
+    <script>self.next_f.push([1, "2:I[12846,[],\"\"]\n4:I[19107,[],\"ClientPageRoot\"]\n5:I[25753,[\"752\",\"static/chunks/f5b5f7fb-91cdb664e744ac6e.js\",\"866\",\"static/chunks/e37a0b60-5bdbaf635e24431c.js\",\"748\",\"static/chunks/6b309846-b149e09192940787.js\",\"785\",\"static/chunks/785-0f86b83c9c6d5a94.js\",\"680\",\"static/chunks/680-3030f614e48d0178.js\",\"663\",\"static/chunks/663-373fe2682f816fba.js\",\"406\",\"static/chunks/app/%5Blang%5D/wallet/page-72611580bc8c1acf.js\"],\"default\",1]\n6:I[4707,[],\"\"]\n8:I[36423,[],\"\"]\n9:I[74196,[\"785\",\"static/chunks/785-0f86b83c9c6d5a94.js\",\"648\",\"static/chunks/648-294bed4b23f0baa5.js\",\"663\",\"static/chunks/663-373fe2682f816fba.js\",\"185\",\"static/chunks/app/layout-3a3e5f2e1ad9412a.js\"],\"default\"]\na:I[10300,[\"785\",\"static/chunks/785-0f86b83c9c6d5a94.js\",\"648\",\"static/chunks/648-294bed4b23f0baa5.js\",\"663\",\"static/chunks/663-373fe2682f816fba.js\",\"185\",\"static/chunks/app/layout-3a3e5f2e1ad9412a.js\"],\"default\"]\nc:I[61060,[],\"\"]\n7:[\"lang\",\"en\",\"d\"]\nd:[]\n"])</script>
+    <script>self.next_f.push([1, "0:[\"$\",\"$L2\",null,{\"buildId\":\"b8ojVd8fvR4REG7-EZodr\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"en\",\"wallet\"],\"initialTree\":[\"\",{\"children\":[[\"lang\",\"en\",\"d\"],{\"children\":[\"wallet\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[[\"lang\",\"en\",\"d\"],{\"children\":[\"wallet\",{\"children\":[\"__PAGE__\",{},[[\"$L3\",[\"$\",\"$L4\",null,{\"props\":{\"params\":{\"lang\":\"en\"},\"searchParams\":{}},\"Component\":\"$5\"}],null],null],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"$7\",\"children\",\"wallet\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"$7\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/next/static/css/30de65721c46034b.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[[\"$\",\"$L9\",null,{}],[\"$\",\"main\",null,{\"children\":[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}],[\"$\",\"$La\",null,{}]]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$Lb\"],\"globalErrorComponent\":\"$c\",\"missingSlots\":\"$Wd\"}]\n"])</script>
+    <script>self.next_f.push([1, "b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"AML Check\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Check your wallet for AML compliance\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n3:null\n"])</script>
+    <script src="../main.js"></script>
+
+</body>
+
+</html>

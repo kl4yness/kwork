@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="next/static/css/30de65721c46034b.css" data-precedence="next">
+    <script src="next/static/chunks/fd9d1056-82bef6cf061c941d.js" async=""></script>
+    <script src="next/static/chunks/117-e88fd9e18528d798.js" async=""></script>
+    <script src="next/static/chunks/main-app-050fd630f446e664.js" async=""></script>
+    <script src="next/static/chunks/785-0f86b83c9c6d5a94.js" async=""></script>
+    <script src="next/static/chunks/648-294bed4b23f0baa5.js" async=""></script>
+    <script src="next/static/chunks/663-373fe2682f816fba.js" async=""></script>
+    <script src="next/static/chunks/app/%5Blang%5D/page-d30f2f4125a3ecdb.js" async=""></script>
+    <script src="next/static/chunks/app/layout-3a3e5f2e1ad9412a.js" async=""></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AML Check</title>
+    <meta name="description" content="Check your wallet for AML compliance">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+    <script src="next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
+    <link rel="stylesheet" href="burger.css">
+</head>
+
+<body>
+    <header class="fixed w-full z-50 header p-4 bg-white">
+        <div class="flex justify-between items-center"><a href="index.html"> <img alt="[object Object]" loading="lazy"
+                    width="158" height="32" decoding="async" data-nimg="1" style="color:transparent"
+                    src="next/static/media/logo.3b6497e6.svg"> </a>
+            <div class="md:flex space-x-4 hidden"><a href="en/analyze.html"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Анализ</button></a><a
+                    href="index.html#faq"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">FAQ</button></a><a
+                    href="index.html#cost"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Ценообразование
+                    </button></a><a href="en/about_us.html"><button
+                        class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">О
+                        нас</button></a></div><a class="" href="en/wallet.html"><button
+                    class="py-2 px-4  text-xs sm:text-sm md:text-lg rounded-3xl bg-black text-white">Проверить свой
+                    кошелек</button></a>
+            <!-- <div class="flex space-x-4 md:hidden"><button
+                    class="py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black">☰</button>
+            </div>
+        </div>
+        <div class="hidden mt-auto flex-col items-center justify-center md:hidden space-y-4 pt-4 text-xl"><a
+                href="en/analyze.html"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Анализ</button></a><a
+                href="index.html#faq"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">FAQ</button></a><a
+                href="index.html#cost"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">Ценообразование</button></a><a
+                href="en/about_us.html"><button
+                    class="   py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black hover:bg-gray-100 font-inter   ">О
+                    нас</button></a></div> -->
+
+
+            <div class="flex space-x-4 md:hidden">
+                <button id="burgerButton"
+                    class="py-1 px-2 rounded-lg transition-all duration-500 no-underline outline-none bg-none text-black"
+                    style="z-index: 2;">
+                    ☰
+                </button>
+            </div>
+
+            <div id="burgerMenu"
+                class="hidden fixed top-0 left-0 w-full bg-white z-50 flex flex-col items-center justify-center text-xl"
+                style="height: 260px; z-index: 1;">
+                <a href="en/analyze.html">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        Анализ
+                    </button>
+                </a>
+                <a href="index.html#faq">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        FAQ
+                    </button>
+                </a>
+                <a href="index.html#cost">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        Ценообразование
+                    </button>
+                </a>
+                <a href="en/about_us.html">
+                    <button
+                        class="py-2 px-4 rounded-lg transition-all duration-500 bg-none text-black hover:bg-gray-100 font-inter">
+                        О нас
+                    </button>
+                </a>
+            </div>
+
+
+
+    </header>
+    <main>
+        <div class="space-y-20">
+            <div class="md:space-y-4 space-y-0">
+                <div
+                    class="flex flex-col md:flex-row space-y-4 md:space-x-2 md:pt-32 justify-center p-12 pt-24 md:pb-0">
+                    <div class="flex flex-col space-y-5">
+                        <h1 class="text-black font-extrabold text-4xl md:text-6xl text-center md:text-left">Проверка
+                            криптовалютных кошельков на наличие грязных денег</h1>
+                        <p class="text-gray-600 font-semibold text-xl md:text-2xl text-center md:text-left">Проверяя
+                            свои кошельки, вы защищаете себя от мошенников и краденых монет.</p>
+                    </div><img alt="Analyse" loading="lazy" width="1512" height="2130" decoding="async" data-nimg="1"
+                        class="flex justify-center items-center md:w-[25%]" style="color:transparent"
+                        srcset="next/analyse-1.png 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fanalyse.9b6716d0.png&amp;w=1920&amp;q=75 1x, next/analyse.png 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fanalyse.9b6716d0.png&amp;w=3840&amp;q=75 2x"
+                        src="next/analyse.png?url=%2Fnext%2Fstatic%2Fmedia%2Fanalyse.9b6716d0.png&amp;w=3840&amp;q=75">
+                </div><a class="flex justify-center items-center md:block md:ml-12 mx-10 md:mx-0"
+                    href="en/wallet.html"><button
+                        class="text-xl w-full md:w-fit md:p-4 py-2 rounded-2xl md:rounded-3xl bg-blue-600 text-white font-semibold">Проверить
+                        свой кошелек</button></a>
+            </div>
+            <div class="space-y-4 mx-4">
+                <div class="flex flex-col p-8 md:flex-row justify-center bg-gray-700 rounded-3xl space-y-4">
+                    <div class="flex flex-col space-y-6">
+                        <h1 class="text-white font-bold text-4xl max-w-xl">Чем мы занимаемся?</h1>
+                        <p class="text-white text-xl max-w-xl">Мы проверяем криптовалюты и транзакции на наличие грязных
+                            деньги и выдаем подробный отчет.
+                            Это необходимо для того, чтобы у вас не возникло проблем с проверяющими органами и чтобы
+                            обезопасить вас от мошенников.</p>
+                    </div><img alt="[object Object]" loading="lazy" width="400" height="400" decoding="async"
+                        data-nimg="1" class="flex justify-center items-center" style="color:transparent"
+                        src="next/static/media/danger.1794b6e6.svg">
+                </div>
+                <div class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex flex-col justify-center bg-white rounded-3xl p-8">
+                        <h1 class="text-black font-bold text-4xl mb-4 max-w-xl">Зачем вам это нужно?</h1>
+                        <p class="text-black text-xl max-w-xl">Если к вам поступают грязные деньги, вы рискуете получить
+                            запрос от проверяющих органов и потерять свои средства из-за блокировщиков.
+                            Этого может и не произойти, но ваш кошелек будет отмечен.
+                            Мы рекомендуем проводить проверки и быть уверенными в своих средствах</p>
+                    </div>
+                    <div class="flex flex-col justify-center bg-blue-600 rounded-3xl p-8">
+                        <h1 class="text-white font-bold text-4xl mb-10 max-w-3xl">Первая проверка - бесплатно</h1>
+                        <img alt="[object Object]" loading="lazy" width="400" height="400" decoding="async"
+                            data-nimg="1" style="color:transparent" src="next/static/media/one.027186d6.svg"><a
+                            class="pt-14" href="en/wallet.html"><button
+                                class="text-xl rounded-3xl bg-blue-600 text-white font-semibold hover:bg-blue-800 duration-500">Проверить
+                                свой кошелек</button></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col space-y-16 md:space-y-0 md:space-x-4 md:flex-row justify-start md:justify-around bg-blue-600 p-8">
+                <div class="flex flex-col space-y-4 md:w-[30%]">
+                    <h1 class="text-white font-bold text-5xl max-w-xl">$5 359 800</h1>
+                    <p class="text-white text-md max-w-xl">За три года работы нам удалось
+                        смогли сэкономить клиентам $5 359 800 на потерях</p>
+                </div>
+                <div class="flex flex-col space-y-4 md:w-[40%] md:items-center">
+                    <h1 class="text-white font-bold text-5xl max-w-xl">+ 6 500 000</h1>
+                    <p class="text-white text-md max-w-xl">Кошельков содержат краденные или грязные деньги</p>
+                </div>
+                <div class="flex flex-col space-y-4 md:w-[30%]">
+                    <h1 class="text-white font-bold text-5xl max-w-xl">29%</h1>
+                    <p class="text-white text-md max-w-xl">Все кошельки, которые мы проверили, подозрительны.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col justify-start bg-white rounded-3xl p-6 space-y-4 mx-4" id="cost">
+                <h1 class="text-black font-bold text-2xl pb-2 mt-4">Сколько стоит ваше душевное спокойствие?</h1>
+                <h1 class="text-violet-400 font-bold text-5xl"> 35 TRX / 0.002 ETH</h1><a class="pt-2"
+                    href="en/wallet.html"><button
+                        class="text-2xl rounded-3xl bg-blue-500 px-4 py-1 text-black font-semibold hover:bg-blue-600 duration-500">Проверить
+                        свой кошелек</button></a>
+            </div>
+            <div class="px-6 text-center md:px-20">
+                <p class="text-gray-700 font-semibold text-xl">По нашей статистике, каждый четвертый кошелек является
+                    подозрительным.
+                    Потратив пару долларов на чек, вы можете уберечь себя от потери нескольких тысяч долларов.
+                </p>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-start bg-gray-600 p-6 space-y-8 md:space-y-0 rounded-3xl mx-4">
+                <div class="md:flex md:flex-col space-y-4">
+                    <h1 class="text-white font-bold text-4xl">Проверка санкционных списков
+                    </h1>
+                    <p class="text-white text-xl">Мы покажем, находится ли адрес в санкционном списке. Любое
+                        действия с такими адресами могут привести к штрафам, блокировке или отзыву лицензии.
+                        .</p>
+                </div><img alt="[object Object]" loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
+                    style="color:transparent" src="next/static/media/sanctions.d56241ca.svg">
+            </div>
+            <div class="flex flex-col md:flex-row justify-start bg-white p-6 space-y-8 md:space-y-0 rounded-3xl mx-4">
+                <div class="md:flex md:flex-col space-y-4">
+                    <h1 class="text-black font-bold text-4xl">Помощь в спасении украденных криптовалют
+                    </h1>
+                    <p class="text-gray-600 text-xl">Мы помогаем вам вернуть деньги, украденные мошенниками. A
+                        специалист проанализирует ситуацию и предложит решение.</p>
+                </div><img alt="Safe" loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
+                    style="color:transparent"
+                    srcset="next/safe-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fsafe.33b406b4.webp&amp;w=640&amp;q=75 1x, next/safe.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fsafe.33b406b4.webp&amp;w=828&amp;q=75 2x"
+                    src="next/safe.webp">
+            </div>
+            <div class="px-4 text-center space-y-6">
+                <p class="text-black font-semibold text-md md:text-2xl">За три года сервис AMLBot был использован
+
+                </p>
+                <h1 class="text-black font-extrabold text-6xl md:text-7xl">500+ компаний и бирж</h1>
+            </div>
+            <div class="flex flex-col justify-start space-y-12 md:space-y-8 px-8">
+                <h1 class="text-black font-semibold text-4xl md:text-4xl">Нам доверяют</h1>
+                <div class="flex flex-wrap justify-center md:gap-y-8 md:gap-x-16 gap-x-2 gap-y-4"><img alt="Cryptohome"
+                        loading="lazy" width="200" height="200" decoding="async" data-nimg="1"
+                        class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/cryptohome-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fcryptohome.209af807.webp&amp;w=256&amp;q=75 1x, next/cryptohome.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fcryptohome.209af807.webp&amp;w=640&amp;q=75 2x"
+                        src="next/cryptohome.png"><img alt="Oneobmen" loading="lazy" width="200" height="200"
+                        decoding="async" data-nimg="1" class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/oneobmen-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=256&amp;q=75 1x, next/oneobmen.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=640&amp;q=75 2x"
+                        src="next/oneobmen.png"><img alt="Exhub" loading="lazy" width="200" height="200"
+                        decoding="async" data-nimg="1" class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/exhub-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fexhub.86eab149.webp&amp;w=256&amp;q=75 1x, next/exhub.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fexhub.86eab149.webp&amp;w=640&amp;q=75 2x"
+                        src="next/exhub.png"><img alt="Crystal" loading="lazy" width="200" height="200" decoding="async"
+                        data-nimg="1" class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/crystal-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fcrystal.46c8aad3.webp&amp;w=256&amp;q=75 1x, next/crystal.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fcrystal.46c8aad3.webp&amp;w=640&amp;q=75 2x"
+                        src="next/crystal.png">
+                    <img alt="Oneobmen" loading="lazy" width="200" height="200" decoding="async" data-nimg="1"
+                        class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/oneobmen-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=256&amp;q=75 1x, next/oneobmen.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=640&amp;q=75 2x"
+                        src="next/kuna.webp">
+                    <img alt="Oneobmen" loading="lazy" width="200" height="200" decoding="async" data-nimg="1"
+                        class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/oneobmen-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=256&amp;q=75 1x, next/oneobmen.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=640&amp;q=75 2x"
+                        src="next/pnl.webp">
+                    <img alt="Oneobmen" loading="lazy" width="200" height="200" decoding="async" data-nimg="1"
+                        class="rounded-3xl bg-white md:p-8" style="color:transparent"
+                        srcset="next/oneobmen-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=256&amp;q=75 1x, next/oneobmen.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Foneobmen.89ab8ea7.webp&amp;w=640&amp;q=75 2x"
+                        src="next/ecruge.webp">
+                </div>
+            </div>
+            <div class="flex flex-col justify-between space-y-8 mx-4">
+                <h1 class="text-black font-semibold text-4xl md:mt-8">Почему AMLBot</h1>
+                <div class="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-4">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-white p-8 justify-around">
+                        <h1 class="text-black font-bold text-4xl">Безопасность</h1>
+                        <p class="text-black text-xl">AMLBot не собирает и не хранит данные о вас или вашем бизнесе.
+                            Вы остаетесь анонимными и защищенными.</p><img alt="Block" loading="lazy" width="200"
+                            height="200" decoding="async" data-nimg="1" style="color:transparent"
+                            srcset="next/block-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fblock.bfc8f4b1.webp&amp;w=256&amp;q=75 1x, next/block.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fblock.bfc8f4b1.webp&amp;w=640&amp;q=75 2x"
+                            src="next/block.png">
+                    </div>
+                    <div class="flex flex-col justify-between rounded-3xl bg-blue-600 p-8 space-y-4">
+                        <h1 class="text-white font-bold text-4xl">Надежность</h1>
+                        <p class="text-white text-xl">У нас есть соответствующие сертификаты, которые вы можете
+                            предъявить
+                            инспекционные органы</p><img alt="Certificate" loading="lazy" width="400" height="400"
+                            decoding="async" data-nimg="1" style="color:transparent"
+                            srcset="next/certificate-1.png 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fcertificate.4f0f9884.webp&amp;w=640&amp;q=75 1x, next/certificate.png 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fcertificate.4f0f9884.webp&amp;w=828&amp;q=75 2x"
+                            src="next/certificate.png?url=%2Fnext%2Fstatic%2Fmedia%2Fcertificate.4f0f9884.webp&amp;w=828&amp;q=75">
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between md:space-x-4 space-y-8 md:space-y-0">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-white p-8 justify-around">
+                        <h1 class="text-black font-bold text-4xl">Поддержка 24/7</h1>
+                        <p class="text-black text-xl">Мы на связи 24 часа в сутки 7 дней в неделю, поэтому любой вопрос
+                            может быть решен быстро и в
+                            формате живого общения.</p><img alt="Telegram" loading="lazy" width="400" height="400"
+                            decoding="async" data-nimg="1" style="color:transparent"
+                            srcset="next/telegram-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Ftelegram.a877cc92.webp&amp;w=640&amp;q=75 1x, next/telegram.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Ftelegram.a877cc92.webp&amp;w=828&amp;q=75 2x"
+                            src="next/tg.webp"><a class="pt-2" href="https://t.me/sprt_aml"><button
+                                class="py-4 px-9 text-2xl rounded-3xl bg-white text-blue-300 font-semibold hover:bg-amber-50 duration-500">Мы
+                                в Telegram</button></a>
+                    </div>
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-600 p-8 justify-around">
+                        <h1 class="text-white font-bold text-4xl">Опыт</h1>
+                        <p class="text-white text-xl">Мы сэкономили около $5 359 800 за счет блокировки на биржах и
+                            обменники</p>
+                        <div class="flex items-center justify-center"><img alt="Coins" loading="lazy" width="200"
+                                height="200" decoding="async" data-nimg="1" style="color:transparent"
+                                srcset="next/coins-1.jpeg 1x?url=%2Fnext%2Fstatic%2Fmedia%2Fcoins.c98e3a3a.webp&amp;w=256&amp;q=75 1x, next/coins.jpeg 2xe?url=%2Fnext%2Fstatic%2Fmedia%2Fcoins.c98e3a3a.webp&amp;w=640&amp;q=75 2x"
+                                src="next/coins.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-8 justify-normal pb-32" id="faq">
+                <h1 class="text-center text-black font-semibold text-4xl">Популярные вопросы</h1>
+                <div class="flex flex-col space-y-8 md:flex-row p-8 justify-between md:space-x-4">
+                    <div>
+                        <div class="flex flex-col space-y-8 rounded-3xl bg-blue-100 p-8 min-w-96">
+                            <h1 class="text-black font-bold text-2xl">Не нашли свой вопрос? </h1>
+                            <p class="text-black text-xl">Пишите нам в Telegram. Мы отвечаем быстро и по делу,
+                                потому что у нас все под контролем 👌</p><a class="pt-2"
+                                href="https://t.me/sprt_aml"><button
+                                    class="py-4 px-9 text-2xl rounded-3xl bg-white text-blue-300 font-semibold hover:bg-amber-50 duration-500">Мы
+                                    в Telegram</button></a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-6 justify-between">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Что показывает проверка адреса?
+                            </h1>
+                            <p class="text-gray-600 text-md">Общий риск (в процентах) - вероятность того, что адрес
+                                связан с незаконной деятельностью. Источники риска - известные типы сервисов, с которыми
+                                с которыми взаимодействовал адрес, и процент средств, принятых от/отданных этим
+                                сервисов, для которых рассчитывается общий риск.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Что означают параметры в результатах проверки?
+                            </h1>
+                            <p class="text-gray-600 text-md">AMLBot проверяет указанный адрес кошелька на наличие ссылок
+                                на
+                                известные сервисы блокчейна. AMLBot условно организует такие сервисы в группы с
+                                разным уровнем риска противоправной деятельности. Результат проверки показывает
+                                связи проверяемого адреса с этими группами в процентном соотношении. На основе
+                                всех связей выдается средняя оценка риска, которая помогает пользователю принимать
+                                дальнейшие
+                                решения по активам.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Как следует понимать оценку риска?</h1>
+                            <p class="text-gray-600 text-md">Каждый клиент сам определяет, какой процент
+                                риска является для него приемлемым. Традиционно значения риска можно разделить следующим
+                                образом
+                                следующим образом:
+                                - 0-25% - чистые активы;
+                                - 25-75 % - средний уровень риска;
+                                - 75 %+ - такой актив не может быть рекомендован.
+                                Также стоит отметить красные источники риска в подробном анализе, описанном на
+                                странице.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Как быстро пополняется баланс?</h1>
+                            <p class="text-gray-600 text-md">После подтверждения транзакции баланс
+                                пополняется:- до 10 минут, если оплата была произведена в течение 24 часов после
+                                выставления счета
+                                если оплата была произведена в течение 24 часов после выставления счета, - до 25 минут,
+                                если оплата была произведена после 24 часов после выставления счета
+                                был выставлен. В целом, BTC, ETH, USDT и фиат обрабатываются быстрее, чем другие монеты.
+
+                            </p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Что означает оценка риска в процентах?</h1>
+                            <p class="text-gray-600 text-md">AMLBot находит связи проверенного адреса с
+                                различными пользователями в блокчейне, каждый из которых имеет свой условный риск. Общий
+                                оценка риска - это среднее значение всех найденных компонентов. Например, если из 2 BTC
+                                на
+                                на верифицированном кошельке, 1 BTC пришел из майнинга (0% риска) и еще 1 BTC из
+                                даркнета
+                                (риск 100 %), оценка риска составит 50 %.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Как AMLBot помогает защититься от блокировки?
+                            </h1>
+                            <p class="text-gray-600 text-md">Проверяя кошельки контрагентов перед
+                                вы можете отклонить их активы, если оценка риска высока. Кроме того, перед
+                                переводить средства на другие сервисы, вы можете проверить адрес своего кошелька и
+                                сохранить
+                                результат (сделать скриншот). Если проверка покажет, что ваши активы не имеют отношения
+                                к
+                                незаконной деятельностью, и сервис заблокировал вас, вы можете предоставить сохраненный
+                                результат, чтобы
+                                подтвердить чистоту ваших активов.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Риск составляет более 50 %, но я уверен.
+                                что адрес надежный. Что мне делать?</h1>
+                            <p class="text-gray-600 text-md">Результаты проверки основаны на международных
+                                базах данных, которые постоянно обновляются. Таким образом, адрес, который вчера имел 0%
+                                риска
+                                сегодня может получить или передать актив рискованному контрагенту. В этом случае оценка
+                                риска
+                                оценка изменится. Если вы хотите быть уверены в результате и определить, в чем
+                                причину высокого риска, мы можем провести для вас подробный анализ. Для этого напишите
+                                нам на info@amlbot.com..</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">В чем разница между проверкой адреса
+                                верификацией и транзакцией TxID?</h1>
+                            <p class="text-gray-600 text-md">Проверка адреса (кошелька) - это анализ всех
+                                адресов, когда-либо связанных с ним, с которых были получены средства и на которые были
+                                отправлены средства
+                                были отправлены. Проверьте транзакцию (необходимо указать TxID), затем выберите:-
+                                Полученные
+                                средства (Получатель) и адрес, на который были получены средства (Депозит). Это позволит
+                                проверить взаимосвязь адресов, с которых были получены средства. Если вы посмотрите
+                                на транзакцию в проводнике блокчейна, то это адреса слева и
+                                все, с кем они взаимодействовали до этой транзакции.- Отдал средства (Sender) и
+                                адрес, на который были отправлены средства (Withdrawal). Это проверяет кошелек (в
+                                blockchain explorer он находится справа), который получил средства, и все их
+                                коммуникации, предшествующие этой транзакции. Таким образом, проверка TxID оценивает
+                                риски для
+                                получателя, если вы решите принять средства, и риски для отправителя, если вы решите
+                                отправить их.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Что произойдет, если я не успею использовать
+                                все мои чеки за месяц?</h1>
+                            <p class="text-gray-600 text-md">Они остаются на вашем счету, и вы можете использовать их в
+                                любое время.
+                            </p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Как часто рекомендуется проводить осмотры?</h1>
+                            <p class="text-gray-600 text-md">Ответ на этот вопрос зависит от вашей уникальной модели
+                                риска
+                                модели. Общая рекомендация заключается в том, чтобы проводить проверку на предмет ПОД
+                                каждый раз, когда вы взаимодействуете с
+                                неизвестным кошельком или смарт-контрактом
+                                .</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Какие криптовалюты анализирует AMLBot?
+                            </h1>
+                            <p class="text-gray-600 text-md">BTC, ETH, LTC, BCH, Tether OMNI, XRP и более 1500+ ERC-20
+                                токенов (включая Tether, BNB, QC, NEXO, TUSD и 60+ токенов DeFi) можно проверить на
+                                сайте
+                                AMLBot.</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                        <div class="flex flex-col space-y-4 justify-between">
+                            <h1 class="text-black font-semibold text-xl">Что делать, если мне нужно больше проверок?
+                            </h1>
+                            <p class="text-gray-600 text-md">Вы можете приобрести чеки по мере необходимости. Количество
+                                чеков
+                                всегда отображается в вашей пользовательской информации
+                                .</p>
+                        </div>
+                        <hr class="w-full bg-gray-400 h-0.5 my-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="flex flex-col justify-start p-4 bg-black space-y-8 md:space-y-4 pt-12">
+        <div class="flex flex-col justify-start space-y-4"><a href="index.html"> <img alt="[object Object]"
+                    loading="lazy" width="158" height="32" decoding="async" data-nimg="1" style="color:transparent"
+                    src="next/static/media/footer.daab4965.svg"> </a>
+            <div class="block font-bold text-md leading-none text-gray-400 mb-3">СЕЙФЛЕМЕНТ ЛИМИТЕД,</div>
+            <p class="uppercase text-sm leading-relaxed text-gray-400 max-w-xs">КВАРТИРА 13 БАШНЯ 2 БЕРКЛИ 7
+                БОНХАНСТРАД-РОУД ЦЫН-КВАН, ГОНКОНГ</p>
+        </div>
+        <hr class="w-full bg-gray-200 h-px my-1">
+        <div class="flex flex-col md:flex-row md:justify-between items-baseline space-y-8 md:space-y-0">
+            <div class="flex flex-col space-y-4">
+                <p class="text-2xl leading-relaxed text-gray-400 max-w-xs">Продукты</p>
+                <div class="flex flex-col space-y-4 text-white font-semibold"><a href="en/wallet.html"> AMLBot </a><a
+                        href="en/wallet.html"> <!-- -->Investigation<!-- --> </a></div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <p class="text-2xl leading-relaxed text-gray-400 max-w-xs">Нормативные документы</p>
+                <div class="flex flex-col space-y-4 text-white font-semibold"><a href="en/wallet.html">
+                        <!-- -->Условия<!-- --> </a><a href="en/wallet.html"> <!-- -->Политика<!-- --> </a></div>
+            </div>
+            <div class="flex flex-col space-y-4 md:mr-8">
+                <p class="text-2xl leading-relaxed text-gray-400 max-w-xs">Социальные сети</p>
+                <div class="footer__social flex flex-row justify-between space-x-14">
+                    <div class="flex flex-col space-y-6 mb-4 md:mb-0"><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://t.me/sprt_aml"><img alt="[object Object]" loading="lazy" width="40"
+                                height="40" decoding="async" data-nimg="1" class="mr-2" style="color:transparent"
+                                src="next/static/media/telegram.905cef1e.svg"><span
+                                class="text-white">Telegram</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.instagram.com/amlbot/"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="next/static/media/instagram.15f77719.svg"><span
+                                class="text-white">Instagram</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.facebook.com/AMLBotHQ"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="next/static/media/facebook.f75958f1.svg"><span
+                                class="text-white">Facebook</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.youtube.com/channel/UCwWKnYS5sQLWVwFBBEEYJgw/videos"><img
+                                alt="[object Object]" loading="lazy" width="40" height="40" decoding="async"
+                                data-nimg="1" class="mr-2" style="color:transparent"
+                                src="next/static/media/youtube.6b2e30b8.svg"><span class="text-white">YouTube</span></a>
+                    </div>
+                    <div class="flex flex-col space-y-6"><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.linkedin.com/company/amlbot/"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="next/static/media/linkedin.9f21170b.svg"><span
+                                class="text-white">LinkedIn</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://www.tiktok.com/@cryptoamlbot"><img alt="[object Object]" loading="lazy"
+                                width="40" height="40" decoding="async" data-nimg="1" class="mr-2"
+                                style="color:transparent" src="next/static/media/tiktok.a837ab25.svg"><span
+                                class="text-white">TikTok</span></a><a
+                            class="flex items-center hover:bg-gray-600 rounded-lg duration-300"
+                            href="https://twitter.com/AMLBotHQ"><img alt="[object Object]" loading="lazy" width="40"
+                                height="40" decoding="async" data-nimg="1" class="mr-2" style="color:transparent"
+                                src="next/static/media/twitter.7245dffa.svg"><span class="text-white">Twitter</span></a>
+                    </div>
+                </div>
+            </div>
+        </div><span class="text-gray-400 font-semibold pb-10">© 2024 AMLBot</span>
+    </footer>
+    <!-- <script src="next/static/chunks/webpack-2cbaef941013e65d.js" async=""></script> -->
+    <script>(self.next_f = self.next_f || []).push([0]); self.next_f.push([2, null])</script>
+    <script>self.next_f.push([1, "1:HL[\"/next/static/css/30de65721c46034b.css\",\"style\"]\n"])</script>
+    <script>self.next_f.push([1, "2:I[12846,[],\"\"]\n4:I[19107,[],\"ClientPageRoot\"]\n5:I[69004,[\"785\",\"static/chunks/785-0f86b83c9c6d5a94.js\",\"648\",\"static/chunks/648-294bed4b23f0baa5.js\",\"663\",\"static/chunks/663-373fe2682f816fba.js\",\"495\",\"static/chunks/app/%5Blang%5D/page-d30f2f4125a3ecdb.js\"],\"default\",1]\n6:I[4707,[],\"\"]\n8:I[36423,[],\"\"]\n9:I[74196,[\"785\",\"static/chunks/785-0f86b83c9c6d5a94.js\",\"648\",\"static/chunks/648-294bed4b23f0baa5.js\",\"663\",\"static/chunks/663-373fe2682f816fba.js\",\"185\",\"static/chunks/app/layout-3a3e5f2e1ad9412a.js\"],\"default\"]\na:I[10300,[\"785\",\"static/chunks/785-0f86b83c9c6d5a94.js\",\"648\",\"static/chunks/648-294bed4b23f0baa5.js\",\"663\",\"static/chunks/663-373fe2682f816fba.js\",\"185\",\"static/chunks/app/layout-3a3e5f2e1ad9412a.js\"],\"default\"]\nc:I[61060,[],\"\"]\n7:[\"lang\",\"en\",\"d\"]\nd:[]\n"])</script>
+    <script>self.next_f.push([1, "0:[\"$\",\"$L2\",null,{\"buildId\":\"b8ojVd8fvR4REG7-EZodr\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"en\"],\"initialTree\":[\"\",{\"children\":[[\"lang\",\"en\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[[\"lang\",\"en\",\"d\"],{\"children\":[\"__PAGE__\",{},[[\"$L3\",[\"$\",\"$L4\",null,{\"props\":{\"params\":{\"lang\":\"en\"},\"searchParams\":{}},\"Component\":\"$5\"}],null],null],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"$7\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/next/static/css/30de65721c46034b.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[[\"$\",\"$L9\",null,{}],[\"$\",\"main\",null,{\"children\":[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L8\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}],[\"$\",\"$La\",null,{}]]}]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$Lb\"],\"globalErrorComponent\":\"$c\",\"missingSlots\":\"$Wd\"}]\n"])</script>
+    <script>self.next_f.push([1, "b:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"AML Check\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Check your wallet for AML compliance\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n3:null\n"])</script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
